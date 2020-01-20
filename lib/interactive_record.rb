@@ -40,5 +40,7 @@ def values_for_insert
   values.join(", ")
 end
 
+def save 
+  DB[:conn].execute("INSERT INTO #{table_name_for_insert}") 
   
 end
